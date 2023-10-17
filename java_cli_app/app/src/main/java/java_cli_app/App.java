@@ -3,6 +3,39 @@
  */
 package java_cli_app;
 
+import org.openapitools.client.*;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.model.*;
+import org.openapitools.client.api.PetApi;
+
+import java.io.File;
+import java.util.*;
+
+//public class PetApiExample {
+//    public static void main(String[] args) {
+//        ApiClient defaultClient = Configuration.getDefaultApiClient();
+//
+//        // Configure API key authorization: api_key
+//        ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+//        api_key.setApiKey("YOUR API KEY");
+//        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//        //api_key.setApiKeyPrefix("Token");
+//
+//        // Create an instance of the API class
+//        PetApi apiInstance = new PetApi();
+//        Long petId = 789; // Long | ID of pet to return
+//
+//        try {
+//            Pet result = apiInstance.getPetById(petId);
+//            System.out.println(result);
+//        } catch (ApiException e) {
+//            System.err.println("Exception when calling PetApi#getPetById");
+//            e.printStackTrace();
+//        }
+//    }
+//}
+
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -10,5 +43,19 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+        // Create an instance of the API class
+        //PetApi apiInstance = new PetApi();
+        //Long petId = 789; // Long | ID of pet to return
+
+        //try {
+        //    Pet result = apiInstance.getPetById(petId);
+        //    System.out.println(result);
+        //} catch (ApiException e) {
+        //    System.err.println("Exception when calling PetApi#getPetById");
+        //    e.printStackTrace();
+        //}
     }
 }

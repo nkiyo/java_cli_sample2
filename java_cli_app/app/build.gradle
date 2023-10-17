@@ -21,6 +21,7 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:32.1.1-jre'
+    implementation files('/root/work/openapi_java_sample/java_cli/build/libs/openapi-java-client-1.0.0.jar')
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
