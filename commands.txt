@@ -1,1 +1,4 @@
 java -jar openapi-generator-cli.jar generate -i petstore.yaml -o java_cli -g java
+cd java_cli
+chmod a+x gradlew 
+./gradlew build
