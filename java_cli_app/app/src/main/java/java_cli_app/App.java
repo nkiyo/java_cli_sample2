@@ -45,17 +45,18 @@ public class App {
         System.out.println(new App().getGreeting());
 
         ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("http://localhost:3000");
 
         // Create an instance of the API class
-        //PetApi apiInstance = new PetApi();
-        //Long petId = 789; // Long | ID of pet to return
+        PetApi apiInstance = new PetApi(defaultClient);
+        long petId = 123; // Long | ID of pet to return
 
-        //try {
-        //    Pet result = apiInstance.getPetById(petId);
-        //    System.out.println(result);
-        //} catch (ApiException e) {
-        //    System.err.println("Exception when calling PetApi#getPetById");
-        //    e.printStackTrace();
-        //}
+        try {
+            Pet result = apiInstance.getPetById(petId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PetApi#getPetById");
+            e.printStackTrace();
+        }
     }
 }
